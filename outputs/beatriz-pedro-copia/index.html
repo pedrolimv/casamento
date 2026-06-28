@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>B&amp;P Wedding</title>
+  <meta name="description" content="Casamento de Beatriz e Pedro - 17 de julho de 2027">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="locked">
+  <section class="gate" id="gate" aria-label="Acesso restrito">
+    <div class="gate-rail">
+      <div class="gate-monogram" aria-label="Beatriz e Pedro">
+        <span>B</span>
+        <span class="amp">&amp;</span>
+        <span>P</span>
+      </div>
+
+      <p class="gate-date">17<br>DE<br>JULHO<br>DE<br>2027</p>
+      <span class="gate-line"></span>
+      <p class="gate-note">Este site é exclusivo para os nossos convidados.</p>
+
+      <form class="gate-form" id="gateForm" autocomplete="off">
+        <label class="sr-only" for="passwordInput">Senha de acesso</label>
+        <input id="passwordInput" class="gate-password" type="password" placeholder="Senha de acesso" aria-label="Senha de acesso">
+        <button class="gate-submit" type="submit">Entrar</button>
+        <p class="gate-error" id="gateError" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <div class="site" id="site" aria-hidden="true">
+    <header class="site-header" id="siteHeader">
+      <button class="brand" data-target="hero" type="button">B <span>&amp;</span> P</button>
+      <nav class="desktop-nav" aria-label="Navegação principal">
+        <button data-target="hero" type="button">Início</button>
+        <button data-target="historia" type="button">Nossa História</button>
+        <button data-target="local" type="button">O Grande Dia</button>
+        <button data-target="programacao" type="button">Programação</button>
+        <button data-target="rsvp" type="button">Presença</button>
+        <button data-target="presentes" type="button">Presentes</button>
+        <button data-target="galeria" type="button">Galeria</button>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <button data-target="hero" type="button">Início</button>
+      <button data-target="historia" type="button">Nossa História</button>
+      <button data-target="local" type="button">O Grande Dia</button>
+      <button data-target="programacao" type="button">Programação</button>
+      <button data-target="rsvp" type="button">Presença</button>
+      <button data-target="presentes" type="button">Presentes</button>
+      <button data-target="galeria" type="button">Galeria</button>
+    </div>
+
+    <main>
+      <section class="hero" id="hero">
+        <img class="hero-image" src="assets/hero.jpeg" alt="Beatriz e Pedro na praia">
+        <div class="hero-overlay"></div>
+        <div class="hero-content reveal">
+          <p class="eyebrow light">Save the date</p>
+          <h1>Beatriz <span>&amp;</span> Pedro</h1>
+          <span class="hairline light-line"></span>
+          <p class="date-line light">17 de julho de 2027</p>
+
+          <div class="countdown" id="countdown" aria-label="Contagem regressiva">
+            <div>
+              <span id="days">000</span>
+              <small>Dias</small>
+            </div>
+            <i>:</i>
+            <div>
+              <span id="hours">00</span>
+              <small>Horas</small>
+            </div>
+            <i>:</i>
+            <div>
+              <span id="minutes">00</span>
+              <small>Min</small>
+            </div>
+            <i>:</i>
+            <div>
+              <span id="seconds">00</span>
+              <small>Seg</small>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <button class="btn btn-light" data-target="rsvp" type="button">Confirmar Presença</button>
+            <button class="btn btn-outline-light" data-target="local" type="button">Ver Local</button>
+          </div>
+        </div>
+        <button class="scroll-cue" data-target="verse" type="button" aria-label="Rolar para o convite">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+        </button>
+      </section>
+
+      <section class="verse soft-section" id="verse">
+        <div class="narrow center">
+          <p class="quote">"Acima de tudo, revistam-se do amor que une todos nós em perfeita harmonia."</p>
+          <p class="small-label">Colossenses 3:14</p>
+          <a class="small-link" href="https://www.bible.com/pt/bible/1930/COL.3.14.NVT" target="_blank" rel="noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7v14"></path><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"></path></svg>
+            Ler versículo
+          </a>
+          <span class="hairline"></span>
+        </div>
+      </section>
+
+      <section class="story section" id="historia">
+        <div class="wide">
+          <div class="section-heading center">
+            <p class="eyebrow">Capítulos</p>
+            <h2>Nossa História</h2>
+            <span class="hairline"></span>
+            <p class="section-intro">"Cada encontro, cada oração e cada momento vivido nos trouxe até aqui. Nossa história foi construída no tempo certo, guiada por Deus e fortalecida pelo amor."</p>
+          </div>
+
+          <div class="timeline">
+            <article class="timeline-item">
+              <div class="timeline-photo"><img src="assets/ring.jpeg" alt="Nos conhecemos"></div>
+              <div class="timeline-copy">
+                <span class="year">2018</span>
+                <h3>Nos conhecemos</h3>
+                <span class="mini-line"></span>
+                <p>Entre tantas possibilidades, nossos caminhos se cruzaram pela primeira vez. Sem imaginar, ali começava uma história que mudaria nossas vidas.</p>
+              </div>
+            </article>
+
+            <article class="timeline-item reverse">
+              <div class="timeline-photo"><img src="assets/ring.jpeg" alt="Começamos a namorar"></div>
+              <div class="timeline-copy">
+                <span class="year">2022</span>
+                <h3>Começamos a namorar</h3>
+                <span class="mini-line"></span>
+                <p>O que antes era amizade e admiração se transformou em amor. Foi o início da nossa caminhada juntos.</p>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-photo"><img src="assets/ring.jpeg" alt="O noivado"></div>
+              <div class="timeline-copy">
+                <span class="year">2025</span>
+                <h3>O noivado</h3>
+                <span class="mini-line"></span>
+                <p>Com o coração cheio de certeza e amor, dissemos 'sim' para uma vida inteira lado a lado.</p>
+              </div>
+            </article>
+
+            <article class="timeline-item reverse">
+              <div class="timeline-photo"><img src="assets/ring.jpeg" alt="O grande dia"></div>
+              <div class="timeline-copy">
+                <span class="year">2027</span>
+                <h3>O grande dia</h3>
+                <span class="mini-line"></span>
+                <p>Agora chegou o momento de celebrar tudo aquilo que Deus construiu em nossa história ao lado das pessoas que amamos.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="location section dark-section" id="local">
+        <div class="medium center">
+          <p class="eyebrow light">Cerimônia</p>
+          <h2>O Grande Dia</h2>
+          <span class="hairline light-line"></span>
+          <p class="section-intro light-copy">"Será uma alegria compartilhar esse momento tão especial com cada pessoa presente."</p>
+          <svg class="pin" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-5.5 10.2-7.4 11.8a1 1 0 0 1-1.2 0C9.5 20.2 4 15 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <h3>Primeira Igreja Presbiteriana Independente de Santos</h3>
+          <p class="address">Praça Belmiro Ribeiro, 1 — Vila Matias — Santos/SP</p>
+          <p class="date-line">17 de julho de 2027 — 16h</p>
+
+          <iframe class="map" title="Local do casamento" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3645.8!2d-46.332!3d-23.961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zPrimeira+Igreja+Presbiteriana+Independente+de+Santos!5e0!3m2!1spt-BR!2sbr!4v1"></iframe>
+
+          <div class="button-row">
+            <a class="btn btn-light" href="https://www.google.com/maps/search/?api=1&amp;query=Primeira+Igreja+Presbiteriana+Independente+de+Santos+Pra%C3%A7a+Belmiro+Ribeiro+1+Santos+SP" target="_blank" rel="noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
+              Abrir rota
+            </a>
+            <a class="btn btn-outline-light" href="https://www.google.com/calendar/render?action=TEMPLATE&amp;text=Casamento+Beatriz+%26+Pedro&amp;dates=20270717T190000Z/20270717T230000Z&amp;location=Pra%C3%A7a+Belmiro+Ribeiro,+1+-+Vila+Matias,+Santos/SP&amp;details=Casamento+de+Beatriz+e+Pedro" target="_blank" rel="noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M3 10h18"></path></svg>
+              Adicionar ao calendário
+            </a>
+            <button class="btn btn-outline-light" id="copyAddress" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="14" height="14" rx="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
+              Copiar endereço
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="schedule section" id="programacao">
+        <div class="medium">
+          <div class="section-heading center">
+            <p class="eyebrow">Cronograma</p>
+            <h2>Programação</h2>
+            <span class="hairline"></span>
+          </div>
+
+          <div class="schedule-list">
+            <div class="schedule-item">
+              <span class="time">16:00</span>
+              <span class="icon-circle">☕</span>
+              <p>Recepção dos convidados</p>
+            </div>
+            <div class="schedule-item">
+              <span class="time">16:30</span>
+              <span class="icon-circle">♡</span>
+              <p>Cerimônia</p>
+            </div>
+            <div class="schedule-item">
+              <span class="time">18:00</span>
+              <span class="icon-circle">⌁</span>
+              <p>Sessão de fotos</p>
+            </div>
+            <div class="schedule-item">
+              <span class="time">18:30</span>
+              <span class="icon-circle">✦</span>
+              <p>Despedida dos noivos</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="rsvp section soft-section" id="rsvp">
+        <div class="form-wrap">
+          <div class="section-heading center">
+            <p class="eyebrow">RSVP</p>
+            <h2>Confirmação de Presença</h2>
+            <span class="hairline"></span>
+            <p class="section-intro">"Seu carinho e presença tornarão esse dia ainda mais especial para nós."</p>
+            <p class="deadline">Pedimos, por gentileza, que a confirmação seja realizada até 17 de junho de 2027.</p>
+          </div>
+
+          <form id="rsvpForm" class="rsvp-form">
+            <label>Nome completo *
+              <input type="text" name="nome" placeholder="Seu nome completo" required>
+            </label>
+            <label>Telefone *
+              <input type="tel" name="telefone" placeholder="(00) 00000-0000" required>
+            </label>
+            <div class="form-grid">
+              <label>Adultos
+                <input type="number" name="adultos" min="0" value="1">
+              </label>
+              <label>Crianças
+                <input type="number" name="criancas" min="0" value="0">
+              </label>
+            </div>
+            <label>Observações
+              <textarea name="observacoes" placeholder="Algo que gostaria de nos dizer?"></textarea>
+            </label>
+
+            <fieldset>
+              <legend>Você estará presente?</legend>
+              <div class="presence-options" role="radiogroup" aria-label="Você estará presente?">
+                <button class="presence active" type="button" data-presence="Sim">Sim, estaremos presentes</button>
+                <button class="presence" type="button" data-presence="Não">Não poderemos comparecer</button>
+              </div>
+            </fieldset>
+            <button class="btn btn-dark submit-rsvp" type="submit">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 21.7a.5.5 0 0 0 .9 0l6.5-19a.5.5 0 0 0-.6-.7l-19 6.5a.5.5 0 0 0 0 .9l7.9 3.2a2 2 0 0 1 1.1 1.1z"></path><path d="m21.9 2.1-10.9 11"></path></svg>
+              Confirmar presença
+            </button>
+            <p class="form-message" id="formMessage" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+
+      <section class="gifts section dark-section" id="presentes">
+        <div class="medium center">
+          <p class="eyebrow light">Com carinho</p>
+          <h2>Lista de Presentes</h2>
+          <span class="hairline light-line"></span>
+          <p class="section-intro light-copy">"A presença de vocês já é o nosso maior presente. Mas, para quem desejar nos abençoar de outra forma, preparamos algumas sugestões com muito carinho."</p>
+
+          <div class="gift-grid">
+            <article class="gift-card">
+              <h3>Magalu</h3>
+              <p>Lista de presentes</p>
+              <a href="#" target="_blank" rel="noreferrer">Acessar lista</a>
+            </article>
+            <article class="gift-card">
+              <h3>Camicado</h3>
+              <p>Lista de presentes</p>
+              <a href="#" target="_blank" rel="noreferrer">Acessar lista</a>
+            </article>
+            <article class="gift-card">
+              <h3>Design Gallery</h3>
+              <p>Av. Marechal Deodoro, 98 — Gonzaga — Santos/SP</p>
+              <a href="https://www.designgallerysantos.com.br/" target="_blank" rel="noreferrer">Visitar loja</a>
+              <a href="https://www.google.com/maps/search/?api=1&amp;query=Design+Gallery+Santos+Av+Marechal+Deodoro+98+Gonzaga" target="_blank" rel="noreferrer">Abrir rota</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery section" id="galeria">
+        <div class="gallery-wrap">
+          <div class="section-heading center">
+            <p class="eyebrow">Momentos</p>
+            <h2>Galeria</h2>
+            <span class="hairline"></span>
+          </div>
+
+          <div class="photo-grid">
+            <figure class="wide-photo"><img src="assets/ring.jpeg" alt="Beatriz e Pedro - 1"></figure>
+            <figure><img src="assets/ring.jpeg" alt="Beatriz e Pedro - 2"></figure>
+            <figure><img src="assets/ring.jpeg" alt="Beatriz e Pedro - 3"></figure>
+            <figure class="wide-photo"><img src="assets/ring.jpeg" alt="Beatriz e Pedro - 4"></figure>
+            <figure><img src="assets/ring.jpeg" alt="Beatriz e Pedro - 5"></figure>
+            <figure><img src="assets/ring.jpeg" alt="Beatriz e Pedro - 6"></figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="closing soft-section">
+        <div class="narrow center">
+          <span class="hairline"></span>
+          <p class="quote">"Mais do que celebrar um casamento, queremos celebrar o amor, a amizade, a família e tudo aquilo que Deus construiu em nossa história."</p>
+          <p class="quote second">"Esperamos viver esse momento inesquecível ao lado de vocês."</p>
+          <span class="hairline"></span>
+          <h2>Beatriz <span>&amp;</span> Pedro</h2>
+          <p class="date-line">17 de julho de 2027</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="medium center">
+        <p class="footer-brand">B &amp; P</p>
+        <p class="footer-date">17.07.2027</p>
+        <nav class="footer-nav" aria-label="Navegação do rodapé">
+          <button data-target="hero" type="button">Início</button>
+          <button data-target="historia" type="button">Nossa História</button>
+          <button data-target="local" type="button">Local</button>
+          <button data-target="rsvp" type="button">RSVP</button>
+          <button data-target="presentes" type="button">Presentes</button>
+          <button data-target="galeria" type="button">Galeria</button>
+        </nav>
+        <button class="back-top" data-target="hero" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 7-7 7 7"></path><path d="M12 19V5"></path></svg>
+          Voltar ao topo
+        </button>
+        <p class="made">Feito com amor</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
